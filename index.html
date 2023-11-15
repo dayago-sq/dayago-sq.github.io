@@ -6,11 +6,11 @@
 </head>
 <body style="background-color: black; margin: 0; padding: 0;">
 
-    <iframe name="encabezado" height="170" width="100%" src="encabezado.html" style="border: none;"></iframe>
+    <iframe name="encabezado" height="170" width="100%" src="encabezado.html" style="border: 1;"></iframe>
 
-    <iframe id="miIframe1" name="menu" style="border: none; margin: 0; padding: 0;" onload="ajustarIframe('miIframe1');" src="menu.html"></iframe>
+    <iframe id="miIframe1" name="menu" style="border: 1; margin: 0; padding: 0;" onload="ajustarIframe('miIframe1');" src="menu.html"></iframe>
 
-    <iframe id="miIframe2" name="contenido" style="border: none; position: absolute; top: 186px; left: 305px; margin: 0; padding: 0;" onload="ajustarIframe('miIframe2');" src="contenido.html"></iframe>
+    <iframe id="miIframe2" name="contenido" style="border: 1; position: absolute; top: 186px; left: 305px; margin: 0; padding: 0;" onload="ajustarIframe('miIframe2');" src="contenido.html"></iframe>
 
     <script>
         function ajustarIframe(iframeId) {
@@ -22,7 +22,7 @@
                 iframe.height = "200px";
             } else {
                 iframe.width = "100%";
-                iframe.height = "2000px";
+                iframe.height = "4000px";
             }
         }
 
