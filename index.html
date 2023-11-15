@@ -10,7 +10,7 @@
     <iframe id="miIframe1" name="menu" height="200" width="300" src="menu.html"></iframe>
     <iframe id="miIframe2" name="contenido" height="200" width="1040" style="position: absolute; top: 186px; left: 305px;" src="contenido.html"></iframe>
     <script>
-        function cambiarValoresIframe() {
+        function cambiarValoresIframe1() {
             var iframe = document.getElementById('miIframe1');
 
             // Verifica el largo de la ventana
@@ -33,11 +33,11 @@
         }
 
         // Llama a la función cuando se carga la página y cuando cambia el tamaño de la ventana
-        window.onload = cambiarValoresIframe;
-        window.onresize = cambiarValoresIframe;
+        window.onload = cambiarValoresIframe1;
+        window.onresize = cambiarValoresIframe1;
     </script>
     <script>
-        function cambiarValoresIframe() {
+        function cambiarValoresIframe2() {
             var iframe = document.getElementById('miIframe2');
 
             // Verifica el largo de la ventana
@@ -60,8 +60,8 @@
         }
 
         // Llama a la función cuando se carga la página y cuando cambia el tamaño de la ventana
-        window.onload = cambiarValoresIframe;
-        window.onresize = cambiarValoresIframe;
+        window.onload = cambiarValoresIframe2;
+        window.onresize = cambiarValoresIframe2;
     </script>
 </body>
 </html>
