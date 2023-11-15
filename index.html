@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -10,58 +9,39 @@
     <iframe id="miIframe1" name="menu" height="200" width="300" src="menu.html"></iframe>
     <iframe id="miIframe2" name="contenido" height="200" width="1040" style="position: absolute; top: 186px; left: 305px;" src="contenido.html"></iframe>
     <script>
-        function cambiarValoresIframe1() {
-            var iframe = document.getElementById('miIframe1');
-
-            // Verifica el largo de la ventana
+        function cambiarValoresIframe() {
             var largoVentana = window.innerHeight ||
                 document.documentElement.clientHeight ||
                 document.body.clientHeight;
 
-            // Puedes ajustar esta condición según tus necesidades
+            // Para miIframe1
+            var iframe1 = document.getElementById('miIframe1');
             if (largoVentana < 600) {
-                // Cambia los valores del iframe
-                iframe.width = 300;
-                iframe.height = 2000;
-                iframe.src = "menu.html";
+                iframe1.width = 300;
+                iframe1.height = 2000;
+                iframe1.src = "menu.html";
             } else {
-                // Restaura los valores originales
-                iframe.width = 300;
-                iframe.height = 200;
-                iframe.src = "menu.html";
+                iframe1.width = 300;
+                iframe1.height = 200;
+                iframe1.src = "menu.html";
+            }
+
+            // Para miIframe2
+            var iframe2 = document.getElementById('miIframe2');
+            if (largoVentana < 600) {
+                iframe2.width = 1040;
+                iframe2.height = 2000;
+                iframe2.src = "contenido.html";
+            } else {
+                iframe2.width = 1040;
+                iframe2.height = 200;
+                iframe2.src = "contenido.html";
             }
         }
 
         // Llama a la función cuando se carga la página y cuando cambia el tamaño de la ventana
-        window.onload = cambiarValoresIframe1;
-        window.onresize = cambiarValoresIframe1;
-    </script>
-    <script>
-        function cambiarValoresIframe2() {
-            var iframe = document.getElementById('miIframe2');
-
-            // Verifica el largo de la ventana
-            var largoVentana = window.innerHeight ||
-                document.documentElement.clientHeight ||
-                document.body.clientHeight;
-
-            // Puedes ajustar esta condición según tus necesidades
-            if (largoVentana < 600) {
-                // Cambia los valores del iframe
-                iframe.width = 1040;
-                iframe.height = 2000;
-                iframe.src = "contenido.html";
-            } else {
-                // Restaura los valores originales
-                iframe.width = 1040;
-                iframe.height = 200;
-                iframe.src = "contenido.html";
-            }
-        }
-
-        // Llama a la función cuando se carga la página y cuando cambia el tamaño de la ventana
-        window.onload = cambiarValoresIframe2;
-        window.onresize = cambiarValoresIframe2;
+        window.onload = cambiarValoresIframe;
+        window.onresize = cambiarValoresIframe;
     </script>
 </body>
 </html>
