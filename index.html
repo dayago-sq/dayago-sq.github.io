@@ -13,21 +13,21 @@
         function cambiarValoresIframe() {
             var iframe = document.getElementById('miIframe1');
 
-            // Verifica el ancho de la ventana
-            var anchoVentana = window.innerWidth ||
-                document.documentElement.clientWidth ||
-                document.body.clientWidth;
+            // Verifica el largo de la ventana
+            var largoVentana = window.innerHeight ||
+                document.documentElement.clientHeight ||
+                document.body.clientHeight;
 
             // Puedes ajustar esta condición según tus necesidades
-            if (anchoVentana < 1200) {
+            if (largoVentana < 400) {
                 // Cambia los valores del iframe
                 iframe.width = 300;
-                iframe.height = 200;
+                iframe.height = 2000;
                 iframe.src = "menu.html";
             } else {
                 // Restaura los valores originales
-                iframe.width = 1040;
-                iframe.height = 2000;
+                iframe.width = 300;
+                iframe.height = 200;
                 iframe.src = "menu.html";
             }
         }
@@ -40,15 +40,15 @@
         function cambiarValoresIframe() {
             var iframe = document.getElementById('miIframe2');
 
-            // Verifica el ancho de la ventana
-            var anchoVentana = window.innerWidth ||
-                document.documentElement.clientWidth ||
-                document.body.clientWidth;
+            // Verifica el largo de la ventana
+            var largoVentana = window.innerHeight ||
+                document.documentElement.clientHeight ||
+                document.body.clientHeight;
 
             // Puedes ajustar esta condición según tus necesidades
-            if (anchoVentana < 1200) {
+            if (largoVentana < 400) {
                 // Cambia los valores del iframe
-                iframe.width = 300;
+                iframe.width = 1040;
                 iframe.height = 2000;
                 iframe.src = "contenido.html";
             } else {
