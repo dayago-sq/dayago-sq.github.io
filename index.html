@@ -1,42 +1,47 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Título de tu página</title>
+    <title></title>
 </head>
-<body style="background-color: black; margin: 0; padding: 0;">
-
-    <iframe name="encabezado" height="170" width="100%" src="encabezado.html" style="border: 1;"></iframe>
-
-    <iframe id="miIframe1" name="menu" style="border: 1; margin: 0; padding: 0;" onload="ajustarIframe('miIframe1');" src="menu.html"></iframe>
-
-    <iframe id="miIframe2" name="contenido" style="border: 1; position: absolute; top: 186px; left: 305px; margin: 0; padding: 0;" onload="ajustarIframe('miIframe2');" src="contenido.html"></iframe>
-
+<body bgcolor="black">
+    <iframe name="encabezado" height="170" width="1350" src="encabezado.html"></iframe>
+    <iframe id="miIframe1" name="menu" height="200" width="300" src="menu.html"></iframe>
+    <iframe id="miIframe2" name="contenido" height="200" width="1040" style="position: absolute; top: 186px; left: 305px;" src="contenido.html"></iframe>
     <script>
-        function ajustarIframe(iframeId) {
-            var iframe = document.getElementById(iframeId);
-            var largoVentana = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        function cambiarValoresIframe() {
+            var largoVentana = window.innerHeight ||
+                document.documentElement.clientHeight ||
+                document.body.clientHeight;
 
+            // Para miIframe1
+            var iframe1 = document.getElementById('miIframe1');
             if (largoVentana < 600) {
-                iframe.width = "100%";
-                iframe.height = "200px";
+                iframe1.width = 300;
+                iframe1.height = 200;
+                iframe1.src = "menu.html";
             } else {
-                iframe.width = "100%";
-                iframe.height = "4000px";
+                iframe1.width = 300;
+                iframe1.height = 2000;
+                iframe1.src = "menu.html";
+            }
+
+            // Para miIframe2
+            var iframe2 = document.getElementById('miIframe2');
+            if (largoVentana < 600) {
+                iframe2.width = 1040;
+                iframe2.height = 200;
+                iframe2.src = "contenido.html";
+            } else {
+                iframe2.width = 1040;
+                iframe2.height = 2000;
+                iframe2.src = "contenido.html";
             }
         }
 
         // Llama a la función cuando se carga la página y cuando cambia el tamaño de la ventana
-        window.onload = function () {
-            ajustarIframe('miIframe1');
-            ajustarIframe('miIframe2');
-        };
-
-        window.onresize = function () {
-            ajustarIframe('miIframe1');
-            ajustarIframe('miIframe2');
-        };
+        window.onload = cambiarValoresIframe;
+        window.onresize = cambiarValoresIframe;
     </script>
 </body>
 </html>
-
