@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider de Imágenes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .slider-container {
+            width: 80%;
+            max-width: 800px;
+            height: 300px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .slider {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            flex: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Botones */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="logo/logo.jpg" alt="Imagen 1"></div>
+            <div class="slide"><img src="instalaciones/fuera.jpg" alt="Imagen 2"></div>
+            <div class="slide"><img src="instalaciones/puertaExterior.jpg" alt="Imagen 3"></div>
+        </div>
+
+        <button class="prev" onclick="moverSlide(-1)">❮</button>
+        <button class="next" onclick="moverSlide(1)">❯</button>
+    </div>
+
+    <script>
+        let indice = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const slider = document.querySelector('.slider');
+
+        function moverSlide(direccion) {
+            indice += direccion;
+
+            if (indice < 0) {
+                indice = totalSlides - 1; // Si estamos en la primera, ir a la última
+            } else if (indice >= totalSlides) {
+                indice = 0; // Si estamos en la última, volver a la primera
+            }
+
+            actualizarSlider();
+        }
+
+        function actualizarSlider() {
+            const desplazamiento = -indice * 100;
+            slider.style.transform = `translateX(${desplazamiento}%)`;
+        }
+
+        // Auto-slide cada 3 segundos
+        setInterval(() => moverSlide(1), 5000);
+    </script>
+
+</body>
+</html>

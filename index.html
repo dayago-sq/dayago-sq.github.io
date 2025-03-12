@@ -1,13 +1,84 @@
-﻿<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinco de Junio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="black">
-    <iframe name="encabezado" height="170" width="1330" src="encabezado.html"></iframe>
-    <iframe id="miIframe1" name="menu" height="2000" width="300" src="menu.html"></iframe>
-    <iframe id="miIframe2" name="contenido" height="2000" width="1030" frameborder="0" style="position: absolute; top: 186px; left: 311px;" src="contenido.html"></iframe>
-    <!-- hola-->
+<body>
+    <div class="container">
+        <header>
+            <img id="logo" src="logo/logo.jpg" alt="Logo de la institución">
+            <h1>Unidad Educativa Fiscal "Cinco de Junio"</h1>
+        </header>
+        
+        <main>
+            <section class="instalaciones">
+                <h2>Instalaciones del Colegio</h2>
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide"><img src="instalaciones/alfaro.jpg" alt="Imagen 1"></div>
+                        <div class="slide"><img src="instalaciones/areaVerde1.jpg" alt="Imagen 2"></div>
+                        <div class="slide"><img src="instalaciones/areaVerde2.jpg" alt="Imagen 3"></div>
+                        <div class="slide"><img src="instalaciones/areaVerde3.jpg" alt="Imagen 4"></div>
+                        <div class="slide"><img src="instalaciones/areaVerde4.jpg" alt="Imagen 5"></div>
+                        <div class="slide"><img src="instalaciones/bar.jpg" alt="Imagen 6"></div>
+                        <div class="slide"><img src="instalaciones/biblioteca.jpg" alt="Imagen 7"></div>
+                        <div class="slide"><img src="instalaciones/cancha1.jpg" alt="Imagen 8"></div>
+                        <div class="slide"><img src="instalaciones/cancha2.jpg" alt="Imagen 9"></div>
+                        <div class="slide"><img src="instalaciones/canchasVoley.jpg" alt="Imagen 10"></div>
+                        <div class="slide"><img src="instalaciones/DECE.jpg" alt="Imagen 11"></div>
+                        <div class="slide"><img src="instalaciones/entrada.jpg" alt="Imagen 12"></div>
+                        <div class="slide"><img src="instalaciones/estacionamiento.jpg" alt="Imagen 13"></div>
+                        <div class="slide"><img src="instalaciones/estacionamientoBusetas.jpg" alt="Imagen 14"></div>
+                        <div class="slide"><img src="instalaciones/fuera.jpg" alt="Imagen 15"></div>
+                        <div class="slide"><img src="instalaciones/lab1.jpg" alt="Imagen 16"></div>
+                        <div class="slide"><img src="instalaciones/lab2.jpg" alt="Imagen 17"></div>
+                        <div class="slide"><img src="instalaciones/patioCentral.jpg" alt="Imagen 18"></div>
+                        <div class="slide"><img src="instalaciones/puertaExterior.jpg" alt="Imagen 19"></div>
+                        <div class="slide"><img src="instalaciones/salida.jpg" alt="Imagen 20"></div>
+                        <div class="slide"><img src="instalaciones/TINI.jpg" alt="Imagen 21"></div>
+                        <div class="slide"><img src="instalaciones/vista.jpg" alt="Imagen 22"></div>
+                    </div>
+                    <button class="prev" onclick="moverSlide(-1)">❮</button>
+                    <button class="next" onclick="moverSlide(1)">❯</button>
+                </div>
+            </section>
+
+            <section class="mision">
+                <h2>Propósito Misional</h2>
+                <article>
+                    <h3>Eje de Gestión</h3>
+                    <p>
+                        Una institución humanística con un enfoque constructivista pedagógico innovador que se adapte a la realidad socio-económico y cultural de la comunidad educativa enfocada en valores éticos, morales y con bienestar emocional, reflejados en el perfil de un egresado competitivo, para insertarse en la sociedad, que le permita establecerse como un referente de las instituciones del sector Sur de la ciudad de Quito.
+                    </p>
+                </article>
+                <article>
+                    <h3>Eje de Convivencia</h3>
+                    <p>
+                        Queremos una Institución educativa segura, inclusiva y diversa, que se vincule con la comunidad y su entorno, gestora de proyectos y programas humanísticos, académicos, tecnológicos, deportivos y sociales con el apoyo de entidades gubernamentales y no gubernamentales, que garanticen el bienestar y participación de todos los actores de la comunidad educativa.
+                    </p>
+                </article>
+                <article>
+                    <h3>Eje Pedagógico</h3>
+                    <p>
+                        Ser una institución educativa orientada a desarrollar en los estudiantes sus capacidades, habilidades y valores que son fundamentales para que se incorporen a la sociedad como seres humanos íntegros que puedan enfrentarse a los retos de manera crítica y reflexiva respetando la cultura de pa                    </p>
+                </article>
+            </section>
+            
+            <section class="himno">
+                <img src="logo/himno.jpg" alt="himno de la institucion">
+                <audio id="himno" controls>
+                    <source src="himno/himno_Colegio_Cinco_de_Junio.m4a" type="audio/mpeg">
+                </audio>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Unidad Educativa Fiscal "Cinco de Junio". Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script src="slide.js"></script>
 </body>
 </html>
