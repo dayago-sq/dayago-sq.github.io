@@ -75,7 +75,6 @@ h1 {
     object-fit: cover;
 }
 
-/* Botones */
 .prev, .next {
     position: absolute;
     top: 50%;
