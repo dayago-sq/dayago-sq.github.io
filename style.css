@@ -19,15 +19,17 @@ header {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    flex-wrap: wrap;
 }
 #logo {
     width: 100px;
+    height: auto;
     margin-right: 20px;
 }
 h1 {
     font-size: 24px;
     text-align: center;
-    flex: 1;
+    flex-grow: 1;
 }
 .instalaciones, .mision, .himno {
     background: white;
@@ -40,16 +42,11 @@ h1 {
     align-items: center;
 }
 
-.himno{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.himno img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .slider-container {
